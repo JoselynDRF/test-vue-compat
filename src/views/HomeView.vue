@@ -1,20 +1,25 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
+  <div>
+    <img
+      alt="Vue logo"
+      src="../assets/logo.png"
+    >
     <HelloWorld :msg="message" />
-    <button @click="onClick">Click</button>
+    <button @click="onClick">
+      Click
+    </button>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 import HelloWorld from '@/components/HelloWorld.vue'
 
-type Data = {
-  message: string
-};
+  type Data = {
+    message: string
+  }
 
-export default Vue.extend({
+export default defineComponent({
   name: 'HomeView',
 
   components: {

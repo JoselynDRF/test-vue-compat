@@ -1,16 +1,20 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ msg }}</h1>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from 'vue'
 
-export default Vue.extend({
+export default defineComponent({
   name: 'HelloWorld',
+
   props: {
-    msg: String
+    msg: {
+      type: String,
+      required: true
+    }
   }
 })
 </script>
