@@ -8,22 +8,29 @@
     <button @click="onClick">
       Click
     </button>
+
+    <h2>Examples</h2>
+    <div>
+      <SlotsExample />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import HelloWorld from '@/components/HelloWorld.vue'
+import SlotsExample from '@/components/incompatible/SlotsExample.vue'
 
-  type Data = {
-    message: string
-  }
+type Data = {
+  message: string
+}
 
 export default defineComponent({
   name: 'HomeView',
 
   components: {
-    HelloWorld
+    HelloWorld,
+    SlotsExample
   },
 
   data (): Data {
